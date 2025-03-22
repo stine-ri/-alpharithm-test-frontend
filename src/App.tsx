@@ -9,7 +9,7 @@ const App = () => {
       <Navbar />
       <Hero />
       <Companies />
-      <Features /> {/* Features already handles the CardCarousel internally */}
+      <Features /> 
     </div>
   );
 };

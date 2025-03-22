@@ -5,7 +5,6 @@ const Companies = () => {
         Join 4,000+ companies already growing
       </h3>
       
-      {/* Add inline styles for the animation */}
       <style>
         {`
           @keyframes roll {
@@ -23,9 +22,9 @@ const Companies = () => {
       </style>
 
       <div className="overflow-hidden">
-        {/* Wrap the repeated images in a container to control spacing */}
+        
         <div className="flex animate-roll space-x-6">
-          {/* Duplicated companies to create a seamless repeat */}
+         
           <img
             src="/images/companies.png"
             alt="Companies Logos"

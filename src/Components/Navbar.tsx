@@ -1,7 +1,7 @@
 import  { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Icons for Hamburger Menu
-import { motion, AnimatePresence } from "framer-motion"; // For Animations
-import logo from "../assets/images/Content.png"; // Import the logo image
+import { FiMenu, FiX } from "react-icons/fi"; 
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/images/Content.png"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

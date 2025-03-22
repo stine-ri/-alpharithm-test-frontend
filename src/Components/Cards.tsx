@@ -6,7 +6,7 @@ import analyticsImg from "../assets/images/Frame 1984078106 (2).png";
 import contentImg from "../assets/images/Frame 1984078106 (3).png";
 import customerImg from "../assets/images/Frame 1984078106 (4).png";
 
-// Card Data
+
 const cards = [
   { title: "Market Prediction", img: marketImg, description: "Use AI insights for smarter business decisions and stay competitive." },
   { title: "Finance", img: financeImg, description: "Our AI models analyze financial data for confident investments." },
@@ -24,15 +24,14 @@ export default function CardCarousel({ activeFeature = 0 }: CardCarouselProps) {
   const totalCards = cards.length;
 
   useEffect(() => {
-    setCurrent(activeFeature); // Update the current card when the activeFeature changes
+    setCurrent(activeFeature); 
   }, [activeFeature]);
 
-  // Click to Move to the Center
+  
   const handleCardClick = (index: number) => {
     setCurrent(index);
   };
 
-  // Positioning Function (No Change for Desktop)
   const getPositionClass = (index: number) => {
     if (index === current) return "z-20 scale-100 -translate-y-10"; 
     if (index === (current - 1 + totalCards) % totalCards) return "z-10 -translate-x-[120%] scale-75";

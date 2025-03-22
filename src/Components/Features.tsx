@@ -1,9 +1,9 @@
 import  { useState, useEffect } from "react";
-import CardCarousel from "./Cards"; // Keep the CardCarousel import
+import CardCarousel from "./Cards"; 
 
 const Features = () => {
   const [activeFeature, setActiveFeature] = useState(0);
-  const [debouncedFeature, setDebouncedFeature] = useState(0); // Debounced state
+  const [debouncedFeature, setDebouncedFeature] = useState(0); 
 
   const featureList = [
     "Market Prediction",
@@ -13,13 +13,13 @@ const Features = () => {
     "Customer Support",
   ];
 
-  // Debounce the activeFeature state
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedFeature(activeFeature);
-    }, 300); // Debounce for 300ms
+    }, 300); 
 
-    return () => clearTimeout(timer); // Clean up the timeout
+    return () => clearTimeout(timer); 
   }, [activeFeature]);
 
   return (
@@ -51,7 +51,7 @@ const Features = () => {
         ))}
       </div>
 
-      {/* Pass the debouncedFeature to the CardCarousel */}
+
       <CardCarousel activeFeature={debouncedFeature} />
     </section>
   );
